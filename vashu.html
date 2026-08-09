@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prateek Website Maker</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050B17;
+    color:white;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(12px);
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    font-size:22px;
+    font-weight:bold;
+    color:#00BFFF;
+}
+
+.logo img{
+    width:40px;
+    height:40px;
+    object-fit:cover;
+    margin-right:10px;
+    border-radius:10px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    margin-left:25px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00BFFF;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 20px 50px;
+    background:linear-gradient(135deg,#08142d,#001b35);
+}
+
+.hero h1{
+    font-size:55px;
+    line-height:1.2;
+}
+
+.hero span{
+    color:#00BFFF;
+}
+
+.hero p{
+    margin:20px auto;
+    max-width:700px;
+    font-size:17px;
+    color:#ddd;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 28px;
+    margin:8px;
+    border-radius:50px;
+    background:#00BFFF;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(0,191,255,.5);
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:90px 8%;
+}
+
+.title,
+.heading{
+    font-size:38px;
+    text-align:center;
+    margin-bottom:45px;
+    color:#00BFFF;
+}
+
+#about p{
+    text-align:center;
+    font-size:18px;
+    max-width:850px;
+    margin:auto;
+    color:#ddd;
+}
+
+/* ================= SERVICES ================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#0d1b33;
+    padding:28px;
+    border-radius:15px;
+    transition:.4s;
+    border:1px solid transparent;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#00BFFF;
+    box-shadow:0 10px 30px rgba(0,191,255,.15);
+}
+
+.card h3{
+    margin-bottom:12px;
+    color:#00BFFF;
+}
+
+.card p{
+    color:#ccc;
+    font-size:14px;
+}
+
+/* ================= PRICING ================= */
+
+#pricing{
+    background:#07101f;
+}
+
+.pricing-text{
+    text-align:center;
+    color:#aaa;
+    margin-top:-30px;
+    margin-bottom:40px;
+}
+
+.pricing-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.price-card{
+    position:relative;
+    background:#0d1b33;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #172b4d;
+    transition:.4s;
+}
+
+.price-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,191,255,.15);
+}
+
+.price-card h3{
+    color:white;
+    font-size:22px;
+}
+
+.price-card h1{
+    color:#00BFFF;
+    font-size:38px;
+    margin:10px 0 0;
+}
+
+.duration{
+    color:#aaa;
+    margin-bottom:20px;
+}
+
+.price-card ul{
+    list-style:none;
+    margin-bottom:25px;
+}
+
+.price-card li{
+    color:#ddd;
+    margin:9px 0;
+    font-size:14px;
+}
+
+.buy-btn{
+    display:block;
+    text-align:center;
+    background:#00BFFF;
+    color:white;
+    padding:12px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.buy-btn:hover{
+    background:#0099cc;
+    transform:scale(1.03);
+}
+
+/* BEST SELLER */
+
+.featured{
+    border:2px solid #00BFFF;
+    transform:scale(1.03);
+}
+
+.featured:hover{
+    transform:scale(1.05) translateY(-5px);
+}
+
+.badge{
+    position:absolute;
+    top:-14px;
+    right:20px;
+    background:#00BFFF;
+    padding:6px 15px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    font-size:17px;
+    margin:15px;
+    color:#ddd;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#08101f;
+    color:#aaa;
+    font-size:13px;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    width:55px;
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:25px;
+    text-decoration:none;
+    color:white;
+    z-index:2000;
+    box-shadow:0 5px 20px rgba(0,0,0,.4);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    header{
+        padding:12px 5%;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .logo img{
+        width:32px;
+        height:32px;
+    }
+
+    nav a{
+        margin-left:10px;
+        font-size:11px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    section{
+        padding:70px 6%;
+    }
+
+    .title,
+    .heading{
+        font-size:30px;
+    }
+
+    .pricing-container{
+        grid-template-columns:1fr;
+        max-width:400px;
+    }
+
+    .featured{
+        transform:none;
+    }
+
+    .featured:hover{
+        transform:translateY(-8px);
+    }
+
+    .price-card h1{
+        font-size:34px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="logo">
+    <img src="logo.png" alt="Prateek Logo">
+    PRATEEK
+</div>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>
+    We Design.<br>
+    <span>You Grow.</span>
+</h1>
+
+<p>
+Professional Website Developer for Businesses,
+Schools, Shops, Personal Brands & Startups.
+</p>
+
+<a class="btn"
+href="https://wa.me/918533804494">
+WhatsApp
+</a>
+
+<a class="btn"
+href="mailto:prateeksukhveersingh11@gmail.com">
+Hire Me
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<p>
+Hi, I'm <b>Prateek Sukhveer Singh</b>.
+I build fast, modern and responsive websites
+that help businesses, schools and creators
+grow online.
+</p>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+<h2 class="title">Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Business Website</h3>
+<p>Professional websites for companies & shops.</p>
+</div>
+
+<div class="card">
+<h3>School Website</h3>
+<p>Modern school websites with gallery and admission pages.</p>
+</div>
+
+<div class="card">
+<h3>Portfolio</h3>
+<p>Personal portfolio websites for students & professionals.</p>
+</div>
+
+<div class="card">
+<h3>Landing Page</h3>
+<p>High-converting landing pages for your business.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PRICING ================= -->
+
+<section id="pricing">
+
+<h2 class="heading">Pricing Plans</h2>
+
+<p class="pricing-text">
+Choose the perfect package for your business.
+</p>
+
+<div class="pricing-container">
+
+
+<!-- STARTER -->
+
+<div class="price-card">
+
+<h3>Starter</h3>
+
+<h1>₹2,999</h1>
+
+<p class="duration">One Time</p>
+
+<ul>
+<li>✔ 3 Pages Website</li>
+<li>✔ Mobile Responsive</li>
+<li>✔ WhatsApp Button</li>
+<li>✔ Contact Form</li>
+<li>✔ Free SSL</li>
+<li>✔ 3 Days Delivery</li>
+</ul>
+
+<a href="https://wa.me/918533804494"
+class="buy-btn">
+Order Now
+</a>
+
+</div>
+
+
+<!-- PROFESSIONAL -->
+
+<div class="price-card featured">
+
+<div class="badge">
+Best Seller
+</div>
+
+<h3>Professional</h3>
+
+<h1>₹5,999</h1>
+
+<p class="duration">One Time</p>
+
+<ul>
+<li>✔ 8 Pages Website</li>
+<li>✔ Premium Design</li>
+<li>✔ Animations</li>
+<li>✔ SEO Optimized</li>
+<li>✔ Gallery</li>
+<li>✔ Google Map</li>
+<li>✔ Free Domain Setup</li>
+<li>✔ 30 Days Support</li>
+</ul>
+
+<a href="https://wa.me/918533804494"
+class="buy-btn">
+Hire Me
+</a>
+
+</div>
+
+
+<!-- BUSINESS PRO -->
+
+<div class="price-card">
+
+<h3>Business Pro</h3>
+
+<h1>₹9,999+</h1>
+
+<p class="duration">Custom Project</p>
+
+<ul>
+<li>✔ Unlimited Pages</li>
+<li>✔ Admin Panel</li>
+<li>✔ E-Commerce</li>
+<li>✔ Payment Gateway</li>
+<li>✔ Blog</li>
+<li>✔ Custom Features</li>
+<li>✔ Priority Support</li>
+</ul>
+
+<a href="https://wa.me/918533804494"
+class="buy-btn">
+Contact Now
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<h2 class="title">Contact Me</h2>
+
+<div class="contact">
+
+<p>📱 8533804494</p>
+
+<p>📧 prateeksukhveersingh11@gmail.com</p>
+
+<a class="btn"
+href="https://wa.me/918533804494">
+Chat on WhatsApp
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+© 2026 Prateek Website Maker
+
+</footer>
+
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a class="whatsapp"
+href="https://wa.me/918533804494"
+aria-label="Chat on WhatsApp">
+💬
+</a>
+
+</body>
+</html>
